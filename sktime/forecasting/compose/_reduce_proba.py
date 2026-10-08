@@ -326,6 +326,8 @@ class MCRecursiveProbaReductionForecaster(BaseProbaForecaster, _ReducerMixin):
         """
         from sktime.transformations.series.lag import Lag
 
+        self._store_fit_data(y, X)
+
         impute_method = self.impute_method
         lags = self._lags
 
